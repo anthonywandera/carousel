@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel component</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+
+      .carousel {
+        background-color: #2b8a3e;
+        padding: 24px 48px;
+        display: flex;
+        gap: 96px;
+        align-items: center;
+        position: relative;
+        width: 800px;
+        margin: 96px auto;
+        border-radius: 8px;
+        padding-left: 96px;
+      }
+
+      blockquote {
+        margin-bottom: 24px;
+        line-height: 1.5;
+        color: #d3f9d8;
+      }
+
+      .author,
+      .job-title {
+        color: #b2f2bb;
+      }
+
+      .maria {
+        height: 200px;
+        border-radius: 8px;
+        transform: scale(1.4);
+        box-shadow: 0 0 48px rgba(0, 0, 0, 0.5);
+      }
+
+      .btn {
+        position: absolute;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        padding: 8px;
+        background-color: #fff;
+        top: 50%;
+        box-shadow: 0 0 48px rgba(0, 0, 0, 0.5);
+      }
+
+      .btn:hover {
+        background-color: #2b8a3e;
+        cursor: pointer;
+      }
+
+      .btn:hover .icon {
+        background-color: #2b8a3e;
+        stroke: #fff;
+        cursor: pointer;
+      }
+
+      .prev {
+        transform: translate(-35%, -50%);
+        left: 0;
+      }
+
+      .next {
+        transform: translate(35%, -50%);
+        right: 0;
+      }
+
+      .icon {
+        width: 24px;
+        height: 24px;
+        stroke: #2b8a3e;
+        background-color: #fff;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="carousel">
+      <img class="maria" alt="maria" src="maria.jpg" />
+      <div>
+        <blockquote>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+          nihil iusto ullam, tempore laudantium voluptatum nobis est quam maxime
+          eligendi impedit reprehenderit fugiat necessitatibus? Ipsam explicabo
+          eaque fuga assumenda. Repudiandae.
+        </blockquote>
+        <p class="author">Maria De Janeiro</p>
+        <p class="job-title">Author</p>
+      </div>
+      <button class="btn prev">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 19.5 8.25 12l7.5-7.5"
+          />
+        </svg>
+      </button>
+      <button class="btn next">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m8.25 4.5 7.5 7.5-7.5 7.5"
+          />
+        </svg>
+      </button>
+    </div>
+  </body>
+</html>
